@@ -1,0 +1,5 @@
+.metadata/
+*.classpath
+*.project
+myPractice/.settings/
+myPractice/bin/
