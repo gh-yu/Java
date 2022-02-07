@@ -3,6 +3,9 @@ package com.gh.practice.chap01.control;
 import java.util.Scanner;
 
 public class ControlPractice {
+
+	// private Scanner sc = new Scanner(System.in);
+
 	public void practice1() {
 		// 아래 예시와 같이 메뉴를 출력하고 메뉴 번호를 누르면 "ㅇㅇ메뉴입니다"를, 종료 번호를 누르면 "프로그램이 종료됩니다."를 출력하세요.
 		Scanner sc = new Scanner(System.in);
@@ -326,4 +329,37 @@ public class ControlPractice {
 		default : System.out.println("잘못 입력하셨습니다.");
 		}
 	}
+
+	public void practice11() {
+		// 정수를 이용해서 4자리 비밀번호 생성
+		// 4자리 정수 입력받아 각 자리 수에 중복되는 값이 없을 경우 '생성 성공'
+		// 중복 값이 있으면 '중복 값 있음', 자리수가 안 맞으면 '자리 수 안 맞음' 출력
+		// 단, 제일 앞자리 수의 값은 1~9 사이 정수
+
+		Scanner sc = new Scanner(System.in);
+		while(true) {
+			System.out.print("비밀번호 입력(1000~9999) : ");
+			int pwd = sc.nextInt();
+			
+			String pwdStr = String.valueOf(pwd);
+			boolean overlapCheck = false;
+			for(int i = 0; i < pwdStr.length(); i++) {
+				for(int j = 0; j < pwdStr.length(); j++) {
+					if (pwdStr.charAt(i) == pwdStr.charAt(j) && i != j){
+						overlapCheck = true;
+					}
+				}
+			}
+
+			if (pwd > 9999 || pwd < 1000) {
+				System.out.println("자리 수 안 맞음");
+			} else if (overlapCheck) {
+				System.out.println("중복 값 있음");
+			} else {
+				System.out.println("생성 성공");
+				break;
+			}
+		}
+	}
+
 }
