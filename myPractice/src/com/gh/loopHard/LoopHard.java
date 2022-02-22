@@ -7,66 +7,66 @@ public class LoopHard {
     private Scanner sc = new Scanner(System.in);
 
     public void practice1() {
-        // »ç¿ëÀÚ·ÎºÎÅÍ ÀÔ·Â¹ŞÀº ÇÏ³ªÀÇ °ªÀÌ ¼Ò¼öÀÎÁö ÆÇº°
-        // ÀÔ·ÂÇÑ ¼ö°¡ 2º¸´Ù ÀÛÀº °æ¿ì "Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù." Ãâ·Â
+        // ì‚¬ìš©ìë¡œë¶€í„° ì…ë ¥ë°›ì€ í•˜ë‚˜ì˜ ê°’ì´ ì†Œìˆ˜ì¸ì§€ íŒë³„
+        // ì…ë ¥í•œ ìˆ˜ê°€ 2ë³´ë‹¤ ì‘ì€ ê²½ìš° "ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤." ì¶œë ¥
 
-        System.out.print("Á¤¼ö ÀÔ·Â(2 ÀÌ»ó) : ");
+        System.out.print("ì •ìˆ˜ ì…ë ¥(2 ì´ìƒ) : ");
         int num = sc.nextInt();
         sc.close();
 
         if (num < 2) {
-            System.out.println("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
+            System.out.println("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
         } else {
             for (int i = 2; i < num; i++) {
                 if (num % i == 0) {
-                    System.out.println("¼Ò¼ö°¡ ¾Æ´Õ´Ï´Ù.");
+                    System.out.println("ì†Œìˆ˜ê°€ ì•„ë‹™ë‹ˆë‹¤.");
                     return;
                 }
             }
 
-            System.out.println("¼Ò¼öÀÔ´Ï´Ù.");
+            System.out.println("ì†Œìˆ˜ì…ë‹ˆë‹¤.");
         }
     }
 
     public void practice2() {
 
         while(true) {
-            System.out.print("Á¤¼ö ÀÔ·Â(2 ÀÌ»ó) : ");
+            System.out.print("ì •ìˆ˜ ì…ë ¥(2 ì´ìƒ) : ");
             int num = sc.nextInt();
             
             if (num < 2) {
-                System.out.println("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
+                System.out.println("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
             } else {
                 sc.close();
 
                 for (int i = 2; i < num; i++) {
                     if (num % i == 0) {
-                        System.out.println("¼Ò¼ö°¡ ¾Æ´Õ´Ï´Ù.");
+                        System.out.println("ì†Œìˆ˜ê°€ ì•„ë‹™ë‹ˆë‹¤.");
                         return;
                     }
                 }
 
-                System.out.println("¼Ò¼öÀÔ´Ï´Ù.");
+                System.out.println("ì†Œìˆ˜ì…ë‹ˆë‹¤.");
                 return;
             }
         }
     }
 
     public void practice3() {
-        // 2ºÎÅÍ »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ¼ö±îÁöÀÇ ¼Ò¼ö ¸ğµÎ Ãâ·Â, ¼Ò¼öÀÇ °³¼ö Ãâ·Â
+        // 2ë¶€í„° ì‚¬ìš©ìê°€ ì…ë ¥í•œ ìˆ˜ê¹Œì§€ì˜ ì†Œìˆ˜ ëª¨ë‘ ì¶œë ¥, ì†Œìˆ˜ì˜ ê°œìˆ˜ ì¶œë ¥
 
         while(true) {
-            System.out.print("Á¤¼ö ÀÔ·Â(2 ÀÌ»ó) : ");
+            System.out.print("ì •ìˆ˜ ì…ë ¥(2 ì´ìƒ) : ");
             int num = sc.nextInt();
 
             if (num < 2) {
-                System.out.println("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
+                System.out.println("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
             } else {
                 int primeCount = 0;
                 boolean primeCheck = true;
                 if (num == 2) {
                     System.out.println(num);
-                    System.out.println("¼Ò¼öÀÇ °³¼ö´Â 1°³ÀÔ´Ï´Ù.");
+                    System.out.println("ì†Œìˆ˜ì˜ ê°œìˆ˜ëŠ” 1ê°œì…ë‹ˆë‹¤.");
                 } else {
                     for(int i = 2; i <= num; i++) {
                         primeCheck = true;
@@ -82,7 +82,7 @@ public class LoopHard {
                         }
                     } 
                     System.out.println();
-                    System.out.println("2ºÎÅÍ " + num + "±îÁö ¼Ò¼öÀÇ °³¼ö´Â " + primeCount + "°³ÀÔ´Ï´Ù.");
+                    System.out.println("2ë¶€í„° " + num + "ê¹Œì§€ ì†Œìˆ˜ì˜ ê°œìˆ˜ëŠ” " + primeCount + "ê°œì…ë‹ˆë‹¤.");
                 }
                 break;
             }
@@ -91,11 +91,11 @@ public class LoopHard {
     }
 
     public void practice4() {
-        // 1ºÎÅÍ »ç¿ëÀÚ¿¡°Ô ÀÔ·Â ¹ŞÀº ¼ö±îÁö Áß¿¡¼­
-        // 2¿Í 3ÀÇ ¹è¼ö ¸ğµÎ Ãâ·Â
-        // 2¿Í 3ÀÇ °ø¹è¼öÀÇ °³¼ö¸¦ Ãâ·Â
+        // 1ë¶€í„° ì‚¬ìš©ìì—ê²Œ ì…ë ¥ ë°›ì€ ìˆ˜ê¹Œì§€ ì¤‘ì—ì„œ
+        // 2ì™€ 3ì˜ ë°°ìˆ˜ ëª¨ë‘ ì¶œë ¥
+        // 2ì™€ 3ì˜ ê³µë°°ìˆ˜ì˜ ê°œìˆ˜ë¥¼ ì¶œë ¥
     
-        System.out.print("ÀÚ¿¬¼ö ÇÏ³ª¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+        System.out.print("ìì—°ìˆ˜ í•˜ë‚˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
         int num = sc.nextInt();
 
         if (num > 0) {
@@ -114,13 +114,13 @@ public class LoopHard {
 
             System.out.println("\ncount : " + count);
         } else {
-            System.out.println("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
+            System.out.println("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
         }
 
     }
 
     public void practice5() {
-        System.out.print("Á¤¼ö ÀÔ·Â : ");
+        System.out.print("ì •ìˆ˜ ì…ë ¥ : ");
         int num = sc.nextInt();
 
         for (int i = 1; i <= num; i++) {
@@ -137,7 +137,7 @@ public class LoopHard {
     }
 
     public void practice6() {
-        System.out.print("Á¤¼ö ÀÔ·Â : ");
+        System.out.print("ì •ìˆ˜ ì…ë ¥ : ");
         int num = sc.nextInt();
 
         for (int i = 1; i <= num; i++) {
@@ -152,6 +152,53 @@ public class LoopHard {
                 System.out.print("*");
             }
             System.out.println("");
+        }
+
+    }
+
+    public void practice7() {
+        System.out.print("ì •ìˆ˜ ì…ë ¥ : ");
+        int num = sc.nextInt();
+
+        int max = num * 2 - 1;
+        for (int i = 1; i <= max; i += 2) {
+            int j = 0;
+            for (; j < max;) {        
+                if (j == num - 1) {
+                    for (int k = 0; k < i; k++) {
+                        System.out.print("*");
+                        j++;
+                    }
+                    num--;
+                } else {
+                    System.out.print(" ");
+                    j++;
+                }
+            }
+            System.out.println();
+        }
+
+    }
+
+    public void practice8() {
+        System.out.print("ì •ìˆ˜ ì…ë ¥ : ");
+        int num = sc.nextInt();
+
+        for (int i = 0; i < num; i++) {
+            if (i == 0 || i == num - 1) {
+                for(int j = 0; j < num; j++) {
+                    System.out.print("*");
+                }
+            } else {
+                for(int j = 0; j < num; j++) {
+                    if (j == 0 || j == num -1) {
+                        System.out.print("*");
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+            }
+            System.out.println();
         }
 
     }

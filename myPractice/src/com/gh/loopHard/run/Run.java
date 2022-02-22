@@ -4,6 +4,6 @@ import com.gh.loopHard.LoopHard;
 
 public class Run {
     public static void main(String[] args) {
-        new LoopHard().practice6();
+        new LoopHard().practice8();
     }
 }
